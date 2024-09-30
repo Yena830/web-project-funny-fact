@@ -325,7 +325,7 @@ function Fact({ fact, setFacts }) {
       </span>
       <div className="vote-buttons">
         <button
-          onClickonClick={() => handleVote("votesInteresting")}
+          onClick={() => handleVote("votesInteresting")}
           disabled={isUpdating}
         >
           👍 {fact.votesInteresting}
