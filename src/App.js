@@ -160,7 +160,15 @@ function NewFactForm({ setFacts, setShowForm }) {
     console.log(text, source, category);
 
     //2. Check if data is valid. If so, create a new fact
-    if (text && isValidHttpUrl(source) && category && textLength <= 200) {
+    if (!isValidHttpUrl(source)) {
+      alert("Please input a valid source URL!");
+      setSource("");
+    } else if (
+      text &&
+      isValidHttpUrl(source) &&
+      category &&
+      textLength <= 200
+    ) {
       //3. Create a new fact object
       // const newFact = {
       //   id: Math.round(Math.random() * 10000000),
